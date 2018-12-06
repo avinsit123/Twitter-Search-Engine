@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A good Boi</title>
+</head>
+<div class="container">
+  <div class="jumbotron" style="background-color:#1daeff !important;">
+    <h2 style="color:#fff;">Search for Tweets</h2>
+    <p style="color:#fff;">The Machine to help you search for tweets and make inferences</p>
+  </div>
+  <p>Twitter Search Engine</p>
+</div>
+
+
+<div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-heading" style="background-color:#1563ff ">Search for by query</div>
+      <div class="panel-body">
+
+<!-- Main Input For Receiving Query to our ML -->
+          <form action="{{ url_for('Search')}}" method="POST">
+            <input type="password" name="Psw">
+			<button type="submit" class="btn btn-primary">Search</button>
+
+               <div class="panel-heading" style="background-color:#1563ff ">Checking the tweets of the user</div>
+      	  <form action="{{ url_for('User')}}" method="POST">
+            <input type="password" name="Psw">
+			<button type="submit" class="btn btn-primary">Check Users Tweets</button>
+
+              <div class="panel-heading" style="background-color:#1563ff ">Check for your following!!How popular you are</div>
+              <a href="{{ url_for('check_followers')}}"><button type="submit" class="btn btn-primary">Check Following </button></a>
+
+
+<!-- Main Input For Receiving Query to our ML -->
+      </div>
+    </div>
+</div>
+</html>
